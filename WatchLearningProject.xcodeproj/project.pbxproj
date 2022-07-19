@@ -17,6 +17,9 @@
 		9B5C2B56287C9E09005670A4 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C2B55287C9E09005670A4 /* ComplicationController.swift */; };
 		9B5C2B58287C9E0A005670A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B5C2B57287C9E0A005670A4 /* Assets.xcassets */; };
 		9B5C2B5B287C9E0A005670A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B5C2B5A287C9E0A005670A4 /* Preview Assets.xcassets */; };
+		9B5C2B6C287CA03B005670A4 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C2B6B287CA03B005670A4 /* WorkoutView.swift */; };
+		9B5C2B70287CA25C005670A4 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B5C2B6F287CA25C005670A4 /* HealthKit.framework */; };
+		9B5C2B74287CA2C4005670A4 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5C2B73287CA2C4005670A4 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,10 @@
 		9B5C2B5A287C9E0A005670A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9B5C2B5C287C9E0A005670A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B5C2B5D287C9E0A005670A4 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		9B5C2B6B287CA03B005670A4 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		9B5C2B6D287CA25B005670A4 /* WatchLearningProject WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchLearningProject WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		9B5C2B6F287CA25C005670A4 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.5.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		9B5C2B73287CA2C4005670A4 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B5C2B70287CA25C005670A4 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +102,7 @@
 				9B5C2B41287C9E06005670A4 /* WatchLearningProject WatchKit App */,
 				9B5C2B4C287C9E09005670A4 /* WatchLearningProject WatchKit Extension */,
 				9B5C2B3A287C9E06005670A4 /* Products */,
+				9B5C2B6E287CA25C005670A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,8 +127,11 @@
 		9B5C2B4C287C9E09005670A4 /* WatchLearningProject WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				9B5C2B6D287CA25B005670A4 /* WatchLearningProject WatchKit Extension.entitlements */,
 				9B5C2B4D287C9E09005670A4 /* WatchLearningProjectApp.swift */,
 				9B5C2B4F287C9E09005670A4 /* ContentView.swift */,
+				9B5C2B73287CA2C4005670A4 /* DataManager.swift */,
+				9B5C2B6B287CA03B005670A4 /* WorkoutView.swift */,
 				9B5C2B51287C9E09005670A4 /* NotificationController.swift */,
 				9B5C2B53287C9E09005670A4 /* NotificationView.swift */,
 				9B5C2B55287C9E09005670A4 /* ComplicationController.swift */,
@@ -137,6 +149,14 @@
 				9B5C2B5A287C9E0A005670A4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9B5C2B6E287CA25C005670A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B5C2B6F287CA25C005670A4 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,7 +289,9 @@
 				9B5C2B52287C9E09005670A4 /* NotificationController.swift in Sources */,
 				9B5C2B50287C9E09005670A4 /* ContentView.swift in Sources */,
 				9B5C2B56287C9E09005670A4 /* ComplicationController.swift in Sources */,
+				9B5C2B74287CA2C4005670A4 /* DataManager.swift in Sources */,
 				9B5C2B4E287C9E09005670A4 /* WatchLearningProjectApp.swift in Sources */,
+				9B5C2B6C287CA03B005670A4 /* WorkoutView.swift in Sources */,
 				9B5C2B54287C9E09005670A4 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "WatchLearningProject WatchKit Extension/WatchLearningProject WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchLearningProject WatchKit Extension/Preview Content\"";
@@ -438,6 +461,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "WatchLearningProject WatchKit Extension/WatchLearningProject WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchLearningProject WatchKit Extension/Preview Content\"";
